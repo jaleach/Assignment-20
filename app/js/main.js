@@ -1,5 +1,14 @@
-console.log('This is cool!');
+;( function (){
 
-$('.container').html(template.example({
-  value: 'Hello, World!!'
-}));
+    "use strict";
+
+
+ var allAlbums = new app.Collections.Albums();
+  allAlbums.fetch().done(function() {
+
+    new app.Routers.MainRouter({
+      collection: allAlbums
+      });
+    Backbone.history.start();
+  });
+}());
