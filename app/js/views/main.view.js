@@ -2,6 +2,7 @@
 
   "use strict";
 
+// refered to class bookmark ER
 app.Views.Main = Backbone.View.extend({
 
 className:'people',
