@@ -8,19 +8,26 @@ initialize: function(options){
 },
 routes:{
   '' : 'homePage',
-  'photo/:id' : 'singlephoto',
+  'add/:id' : 'addAlbum',
+  'add' : 'addPic'
 },
 homePage: function(){
   new app.Views.Main({
     collection: this.collection
   });
 },
+AddPhoto : function(){
+  new app.Views.add({
+    collection : this.collection
+  })
+}
 singlePhoto: function(id) {
-  new app.Views.SingleView({
+  new app.Views.Single({
     singleID: id,
     collection: this.collection
   });
-}
+},
+
 });
 
 }());

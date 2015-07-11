@@ -1,12 +1,14 @@
 ;( function (){
 
     "use strict";
-  app.Models.Albums = Backbone.Model.extend({
+  app.Models.Album = Backbone.Model.extend({
     idAttribute: '_id',
     defaults:  {
+      id: '',
       url: '',
-      visited: false,
-      title: ''
+      title: '',
+      image: '',
+      description ''
     }
   });
 
