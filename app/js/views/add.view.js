@@ -2,36 +2,40 @@
 
     "use strict";
 
-    app.Views.AddView = Backbone.View.angular.extend({
+    app.Views.AddView = Backbone.View.extend({
       className: 'add',
       template: hbs.add,
 
     events: {
-      'submit #addPic' : 'addPic'
+      'submit #addAlbum' : 'addAlbum'
 
   },
-  initialize:  funciton (options){
+  initialize:  function (options){
     var args = options || {};
     this.collection = args.collections;
     this.render();
-    $('content').html(this.el);
+    $('container').html(this.el);
   },
-  addPic; function(event){
+  render: function(){
+    this.$el.html(this.template);
+  },
+  addPic: function(event){
     event.preventDefault();
 
     var self = this,
       form = $(event.target),
-      URL =  form.find('#albumURL').val(),
-      title = form.find('#picTitle').val(),
-      image = form.find('#pic').val(),
+      URL =  form.find('#picURL').val(),
+      title = form.find('#picPerson').val(),
+      // image = form.find('#pic').val(),
       description = form.find('#description').val;
-    var pict = new.app.Models.Album.Pic({
+    var pict = new app.Models.Album ({
       title : title,
-      image : image,
+      URL : URL,
       description : description
 
     });
   this.collection.add(pict).save().success(function(){
+    self.render();
 
   });
 
@@ -40,7 +44,7 @@
 
 
 
-
+});
 
 
 

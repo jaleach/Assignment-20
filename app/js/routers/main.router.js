@@ -8,8 +8,8 @@ initialize: function(options){
 },
 routes:{
   '' : 'homePage',
-  'add/:id' : 'addAlbum',
-  'add' : 'addPic'
+  'pic/:id' : 'singlePhoto',
+  'add' : 'addPhoto'
 },
 homePage: function(){
   new app.Views.Main({
@@ -17,16 +17,16 @@ homePage: function(){
   });
 },
 AddPhoto : function(){
-  new app.Views.add({
+  new app.Views.Add({
     collection : this.collection
-  })
-}
+  });
+},
 singlePhoto: function(id) {
   new app.Views.Single({
     singleID: id,
     collection: this.collection
   });
-},
+}
 
 });
 

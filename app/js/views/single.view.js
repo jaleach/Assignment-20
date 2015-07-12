@@ -3,7 +3,7 @@
     "use strict";
     // refered to class bookmark ER
 
-app.Views.SingleView = Backbone.View.extend({
+app.Views.Single = Backbone.View.extend({
   className: 'single',
   template: hbs.single,
 

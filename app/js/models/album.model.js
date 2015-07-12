@@ -7,8 +7,8 @@
       id: '',
       url: '',
       title: '',
-      image: '',
-      description ''
+      // image: '',
+      description: ''
     }
   });
 
