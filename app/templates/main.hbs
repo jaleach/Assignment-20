@@ -1,10 +1,11 @@
 <h1>My photo pages</h1>
-<div class="picperson">
+{{!-- <div class="picperson"> --}}
+<ul>
   {{#each pic}}
-  <li data-id="{{_id}}"></li>
-  <li class="title"> {{title}}</li>
-  <a href="#pic/ {{_id}}">
-    <img src="{{url}}">
-    </a>
+  <li data-id="{{_id}}">
+  <li class="title"> {{title}}
+  <a href="#pic/ {{_id}}"><img src="{{url}}"></a>
+  </li>
+</ul>
 </div>
 {{/each}}

@@ -17,7 +17,7 @@ this.render();
 $(".container").html(this.el);
 },
 render: function(){
-  this.$el.html(this.template({album: this.collection.toJSON()}));
+  this.$el.html(this.template({pic: this.collection.toJSON()}));
 }
 
 
