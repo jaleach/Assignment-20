@@ -16,14 +16,14 @@ homePage: function(){
     collection: this.collection
   });
 },
-AddPhoto : function(){
+addPhoto : function(){
   new app.Views.Add({
     collection : this.collection
   });
 },
 singlePhoto: function(id) {
   new app.Views.Single({
-    singleID: id,
+    singleId: id,
     collection: this.collection
   });
 }

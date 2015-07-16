@@ -1,6 +1,11 @@
 .home {
-  background-color: beige; }
+  background-color: beige;
+  font-style: italic; }
 
 .container {
-  width: 100;
-  background-color: grey; }
+  width: 500px;
+  background-color: grey;
+  list-style: none; }
+
+.main {
+  width: 500px; }

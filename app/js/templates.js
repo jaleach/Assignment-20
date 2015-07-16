@@ -1,6 +1,6 @@
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["add"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<h3>New Picture</h3>\n\n<form id='addAlbum'>\n\n  <input type = 'text' id='picPerson' placeholder = 'Name'>\n  <input type = 'text' id='picURL' placeholder = 'URL of picture'>\n  <input type = 'text' id='description' placeholder = 'Description'>\n  <button id='addAlbum'>App Pic</button>\n</form>\n";
+    return "<h3>New Picture</h3>\n\n<form id='addAlbum'>\n\n  <input type = 'text' id='picPerson' placeholder = 'Name'>\n  <input type = 'text' id='picURL' placeholder = 'URL of picture'>\n  <input type = 'text' id='description' placeholder = 'Description'>\n  <button id='addAlbum'>Add a Pic</button>\n</form>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["example"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
@@ -16,13 +16,15 @@ this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,
 
   return "  <li data-id=\""
     + alias3(((helper = (helper = helpers._id || (depth0 != null ? depth0._id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"_id","hash":{},"data":data}) : helper)))
-    + "\">\n  <li class=\"title\"> "
+    + "\">\n<h2 class=\"title\">"
     + alias3(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"title","hash":{},"data":data}) : helper)))
-    + "\n  <a href=\"#pic/ "
+    + "</h2>\n  <a href=\"#pic/"
     + alias3(((helper = (helper = helpers._id || (depth0 != null ? depth0._id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"_id","hash":{},"data":data}) : helper)))
     + "\"><img src=\""
-    + alias3(((helper = (helper = helpers.url || (depth0 != null ? depth0.url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"url","hash":{},"data":data}) : helper)))
-    + "\"></a>\n  </li>\n</ul>\n</div>\n";
+    + alias3(((helper = (helper = helpers.URL || (depth0 != null ? depth0.URL : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"URL","hash":{},"data":data}) : helper)))
+    + "\"></a>\n  <p>"
+    + alias3(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"description","hash":{},"data":data}) : helper)))
+    + "</a>\n  </li>\n</ul>\n</div>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
@@ -35,15 +37,13 @@ this["hbs"]["single"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"m
 
   return "<div class=\"singleAlbum\">\n\n  <h2>"
     + alias3(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"title","hash":{},"data":data}) : helper)))
-    + "</h2>\n  <img src=\""
-    + alias3(((helper = (helper = helpers.URL || (depth0 != null ? depth0.URL : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"URL","hash":{},"data":data}) : helper)))
-    + "\">\n  "
+    + "</h2>\n  "
     + alias3(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"description","hash":{},"data":data}) : helper)))
     + "\n  <li data-id=\""
     + alias3(((helper = (helper = helpers._id || (depth0 != null ? depth0._id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"_id","hash":{},"data":data}) : helper)))
     + "\"></li>\n  <a href=\"pic/ "
     + alias3(((helper = (helper = helpers._id || (depth0 != null ? depth0._id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"_id","hash":{},"data":data}) : helper)))
     + "\">\n  <img src=\""
-    + alias3(((helper = (helper = helpers.url || (depth0 != null ? depth0.url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"url","hash":{},"data":data}) : helper)))
+    + alias3(((helper = (helper = helpers.URL || (depth0 != null ? depth0.URL : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"URL","hash":{},"data":data}) : helper)))
     + "\"></a>\n</div>\n\n\n\n";
 },"useData":true});

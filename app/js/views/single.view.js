@@ -9,13 +9,13 @@ app.Views.Single = Backbone.View.extend({
 
 initialize: function(options){
   var args = options || {};
-  this.singleID = args.singleID;
+  this.singleId = args.singleId;
   this.collection = args.collection;
   this.render();
   $('.container').html(this.el);
 },
 render: function(){
-  var singleAlbum = this.collection.get(this.singleID);
+  var singleAlbum = this.collection.get(this.singleId);
   this.$el.html(this.template(singleAlbum.toJSON()));
 }
 });
