@@ -1,8 +1,8 @@
-## Welcome to My Repo
+## Picture Album
 
-> Assignment 20, One page application
+> Single page application using Backbone
 
->>Refered to class bookmark ER in setting up
+
 
 
 
